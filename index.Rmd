@@ -89,7 +89,6 @@ leaflet(locations) %>%
 
 
 
-
 There is something wrong with this map because many locations look like it's in Russia. It should be Alska, how to fix?
 
 
@@ -98,7 +97,7 @@ locs <- locations %>% mutate(Longitude = abs(Longitude) * -1)
 
 leaflet(locs) %>% 
   addTiles() %>% 
-  addMarkers(~ Longitude, ~ Latitude, popup = ~ Location)
+  addMarkers(~ Longitude, ~ Latitude, popup = ~ Location, icon = markerIcon)
 ```
 
 ```
